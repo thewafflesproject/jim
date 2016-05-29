@@ -9,10 +9,15 @@
       background: url(stars.gif) repeat;
       background-color: yellow;
       font-size: 1.5em;
+      text-align: center;
       animation-name: scroll;
       animation-duration: 3s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
+      -moz-animation-name: scroll;
+      -moz-animation-duration: 3s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-iteration-count: infinite;
     }
 
     .blink { 
@@ -22,6 +27,10 @@
       animation-duration: 1s;
       animation-timing-function: step-start;
       animation-iteration-count: infinite;
+      -moz-animation-name: blink;
+      -moz-animation-duration: 1s;
+      -moz-animation-timing-function: step-start;
+      -moz-animation-iteration-count: infinite;
     }
 
     p {
@@ -39,10 +48,27 @@
       0% { background-position-y: 0px; }
       100% { background-position-y: 200px; }
     }
+
+    @-moz-keyframes blink {
+      0% { opacity: 1.0; }
+      50% { opacity: 0.0; }
+      100% { opacity: 1.0; }
+    }
+
+    @-moz-keyframes scroll {
+      0% { background-position-y: 0px; }
+      100% { background-position-y: 200px; }
+    }
   </style>
 </head>
 <body>
   <h1 class="blink">THE JIM PROJECT</h1>
   <p>This is the JIM project. <a href="https://en.wikipedia.org/wiki/Buffalo_buffalo_Buffalo_buffalo_buffalo_buffalo_Buffalo_buffalo" target="_blank">Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo</a>.</p>
+  
+  <a href="http://jimfleming.me/" target="_blank"><img src="home.gif" /></a>
+  
+  <a href="https://www.google.com/maps/place/San+Francisco,+CA/@37.7576793,-122.5076402,12z/data=!3m1!4b1!4m5!3m4!1s0x80859a6d00690021:0x4a501367f076adff!8m2!3d37.7749295!4d-122.4194155" target="_blank"><img src="globe.gif" /></a>
+  
+  <img src="construction.gif" />
 </body>
 </html>
