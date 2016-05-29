@@ -8,7 +8,11 @@
       margin: 100px;
       background: url(stars.gif) repeat;
       background-color: yellow;
-      font-size: 2em;
+      font-size: 1.5em;
+      animation-name: scroll;
+      animation-duration: 3s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
     }
 
     .blink { 
@@ -30,10 +34,15 @@
       50% { opacity: 0.0; }
       100% { opacity: 1.0; }
     }
+
+    @keyframes scroll {
+      0% { background-position-y: 0px; }
+      100% { background-position-y: 200px; }
+    }
   </style>
 </head>
 <body>
   <h1 class="blink">THE JIM PROJECT</h1>
-  <p>This is the JIM project. <a href="https://en.wikipedia.org/wiki/Buffalo_buffalo_Buffalo_buffalo_buffalo_buffalo_Buffalo_buffalo">Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo</a>.</p>
+  <p>This is the JIM project. <a href="https://en.wikipedia.org/wiki/Buffalo_buffalo_Buffalo_buffalo_buffalo_buffalo_Buffalo_buffalo" target="_blank">Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo</a>.</p>
 </body>
 </html>
